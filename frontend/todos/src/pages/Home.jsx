@@ -89,8 +89,8 @@ const Home = ({ searchQuery }) => {
       {showModal && (
         <AddNoteModal onClose={() => setShowModal(false)} onSave={handleSaveNote} edit={edit} />
       )}
-      <div className="flex flex-wrap gap-6 justify-center">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex flex-wrap gap-6 justify-around">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredNotes.map((note) => (
             <NoteCard
               key={note._id}

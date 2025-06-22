@@ -1,10 +1,14 @@
-const mongoose=require("mongoose")
+// backend/dbconfig.js
+const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://arpanbagadia:5O2vxwJVlwERdW6K@arpan.4cy9l.mongodb.net/?retryWrites=true&w=majority&appName=Arpan')
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
 
-.then(()=>{
-    console.log("database connect successfully")
-})
-.catch((err)=>{
-    console.log(err)
-})
+module.exports = connectDB;
