@@ -16,8 +16,8 @@ services:
       - MONGO_URI=mongodb://mongo:27017/todos
       - PORT=5000
       - JWT_SECRET=1234
-      - EMAIL=arpanbagadia@gmail.com
-      - EMAIL_PASS=ldih gzbc zifs tmtg
+      - EMAIL=arpan.imscit@gmail.com
+      - EMAIL_PASS=ldih gzbc zifs ertv
     depends_on:
       - mongo
 
